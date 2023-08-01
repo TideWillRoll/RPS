@@ -19,10 +19,5 @@ def script():
         print(script())
     if restart == "no" or restart == "n" or restart == False:
         print("Thanks for playing!")
-def score():
-    score = 0
-    while play():
-        if is_win == True:
-            print(score(+1))
 print(play())
 print(script())
