@@ -12,17 +12,5 @@ def play():
 def is_win(player, opponent):
     if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
         return True
-def script():
-    restart = input("Play again?")
-    if restart == "yes" or restart == "y" or restart == True:
-        print(play())
-        print(script())
-    if restart == "no" or restart == "n" or restart == False:
-        print("Thanks for playing!")
-def score():
-    score = 0
-    while play():
-        if is_win == True:
-            print(score(+1)) 
 print(play())
 print(script())
