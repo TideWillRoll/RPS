@@ -4,7 +4,7 @@ def play():
     user_choice = input(choices)
     computer_choice = random.choice(choices)
     is_win = (user_choice == 'Rock' and computer_choice == 'Scissors') or (user_choice == 'Paper' and computer_choice == 'Rock') or (user_choice == 'Scissors' and computer_choice == 'Paper')
-    is_loss = (computer_choice == 'Paper' and user_choice == 'Rock') or (computer_choice == 'Rock' and user_choice == 'Scissors') or (computer_choice == 'Scissors' and user_choice == 'Rock')
+    is_loss = (user_choice == 'Rock' and computer_choice == 'Paper') or (user_choice == 'Paper' and computer_choice == 'Scissors') or (user_choice == 'Scissors' and computer_choice == 'Rock')
     tie = (user_choice == 'Rock' and computer_choice == 'Rock') or (user_choice == 'Paper' and computer_choice == 'Paper') or (user_choice == 'Scissors' and computer_choice == 'Scissors') 
     print(f"You chose {user_choice}, Computer chose {computer_choice}")
     if is_win:
@@ -19,7 +19,6 @@ def script():
         if restart == "Yes" or restart == "yes":
             play()
             script()
-            continue
         else:
             print("Thanks for playing!")        
 play()
