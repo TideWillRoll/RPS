@@ -15,11 +15,11 @@ def play():
         print("That's a tie!")    
 def script():
     restart = input("Play again?")
-    while True:
-        if restart == "Yes" or restart == "yes":
-            play()
-            script()
-        else:
-            print("Thanks for playing!")        
+    if restart == "Yes" or restart == "yes":
+        play()
+        script()
+    elif restart == "No" or restart == "no":
+        print("Thanks for playing!")   
+        quit()    
 play()
 script()
